@@ -1,0 +1,130 @@
+{
+  "name": "sidekick-windows",
+  "productName": "Sidekick",
+  "version": "1.0.0",
+  "description": "Sidekick for Windows: an AI sidekick that lives next to your cursor, points at the exact control, draws, explains and can drive your PC.",
+  "main": "src/main/main.js",
+  "author": "moony-coder",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "test": "node --test \"test/unit/*.test.js\"",
+    "test:e2e": "node test/e2e/run-e2e.js",
+    "verify:windows": "node scripts/run-verify.js",
+    "rename": "node scripts/rename.js",
+    "icons": "python3 scripts/make-icons.py",
+    "dist": "electron-builder --win nsis --x64",
+    "dist:dir": "electron-builder --win dir --x64"
+  },
+  "dependencies": {
+    "koffi": "^3.3.6",
+    "three": "^0.180.0",
+    "msedge-tts": "^2.0.5"
+  },
+  "devDependencies": {
+    "electron": "^45.2.1",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.moonycoder.sidekick",
+    "productName": "Sidekick",
+    "copyright": "MIT",
+    "directories": {
+      "output": "dist",
+      "buildResources": "buildResources"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json",
+      "brand.json",
+      "LICENSE",
+      "NOTICE.md",
+      "node_modules/three/build/three.module.js",
+      "node_modules/three/build/three.core.js",
+      "node_modules/koffi/**/*",
+      "node_modules/@koromix/koffi-win32-x64/**/*",
+      "!node_modules/koffi/build/koffi/!(win32_x64)/**",
+      "!**/*.map",
+      "node_modules/msedge-tts/**/*",
+      "node_modules/axios/**/*",
+      "node_modules/follow-redirects/**/*",
+      "node_modules/form-data/**/*",
+      "node_modules/asynckit/**/*",
+      "node_modules/combined-stream/**/*",
+      "node_modules/delayed-stream/**/*",
+      "node_modules/es-set-tostringtag/**/*",
+      "node_modules/es-errors/**/*",
+      "node_modules/get-intrinsic/**/*",
+      "node_modules/call-bind-apply-helpers/**/*",
+      "node_modules/function-bind/**/*",
+      "node_modules/es-define-property/**/*",
+      "node_modules/es-object-atoms/**/*",
+      "node_modules/get-proto/**/*",
+      "node_modules/dunder-proto/**/*",
+      "node_modules/gopd/**/*",
+      "node_modules/has-symbols/**/*",
+      "node_modules/hasown/**/*",
+      "node_modules/math-intrinsics/**/*",
+      "node_modules/has-tostringtag/**/*",
+      "node_modules/mime-types/**/*",
+      "node_modules/mime-db/**/*",
+      "node_modules/https-proxy-agent/**/*",
+      "node_modules/agent-base/**/*",
+      "node_modules/debug/**/*",
+      "node_modules/ms/**/*",
+      "node_modules/proxy-from-env/**/*",
+      "node_modules/buffer/**/*",
+      "node_modules/base64-js/**/*",
+      "node_modules/ieee754/**/*",
+      "node_modules/isomorphic-ws/**/*",
+      "node_modules/stream-browserify/**/*",
+      "node_modules/inherits/**/*",
+      "node_modules/readable-stream/**/*",
+      "node_modules/string_decoder/**/*",
+      "node_modules/safe-buffer/**/*",
+      "node_modules/util-deprecate/**/*",
+      "node_modules/ws/**/*"
+    ],
+    "asarUnpack": [
+      "node_modules/koffi/**/*",
+      "node_modules/@koromix/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "assets",
+        "to": "assets",
+        "filter": [
+          "tray.png",
+          "app-1024.png"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "buildResources/icon.ico",
+      "artifactName": "Sidekick-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Sidekick",
+      "installerIcon": "buildResources/icon.ico",
+      "uninstallerIcon": "buildResources/icon.ico",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false
+    }
+  }
+}

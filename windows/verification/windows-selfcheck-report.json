@@ -1,0 +1,120 @@
+{
+  "startedAt": "2026-11-01T07:20:24.923Z",
+  "finishedAt": "2026-11-01T07:24:30.764Z",
+  "platform": "win32",
+  "osRelease": "10.0.26200",
+  "electron": "45.2.1",
+  "appVersion": "1.0.0",
+  "displays": [
+    {
+      "id": 3164819177,
+      "scaleFactor": 1.5,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 800
+      }
+    }
+  ],
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "skip": 2,
+    "total": 11
+  },
+  "results": [
+    {
+      "name": "PowerShell scripts parse with the real powershell.exe parser",
+      "status": "PASS",
+      "detail": "16 scripts parse on PowerShell 5.1.26100.9711",
+      "ms": 1431
+    },
+    {
+      "name": "koffi Win32 layer loaded (real user32)",
+      "status": "PASS",
+      "detail": "cursor 1158,634; koffi/user32 active",
+      "ms": 0
+    },
+    {
+      "name": "UIA control list cold vs warm on a real window",
+      "status": "PASS",
+      "detail": "3 controls; cold 2499 ms, warm 29 ms",
+      "ms": 2529
+    },
+    {
+      "name": "SendInput types Unicode and TextPattern reads it back",
+      "status": "PASS",
+      "detail": "Unicode round-trip (héllo ✓ 日本 —) through a UIA TextPattern script",
+      "ms": 1914
+    },
+    {
+      "name": "A real click lands within 2 px of a UIA control",
+      "status": "PASS",
+      "detail": "\"ClickTarget\" -> 398,518 (0.71 px); button handler fired",
+      "ms": 861
+    },
+    {
+      "name": "Notepad external UIA tests",
+      "status": "SKIP",
+      "detail": "Notepad/Explorer window activation is blocked in this automated session: Failed to open path",
+      "ms": 0
+    },
+    {
+      "name": "Mouse mapping and UIA rectangles agree through screenToDipPoint",
+      "status": "PASS",
+      "detail": "scale 1.5; Electron 420x260 vs UIA 420x260 (dx 0, dy 0)",
+      "ms": 1695
+    },
+    {
+      "name": "windowAction minimize and restore change IsIconic",
+      "status": "PASS",
+      "detail": "minimized (IsIconic=true) then restored (false)",
+      "ms": 3663
+    },
+    {
+      "name": "Dragging a file onto a folder in Explorer moves it on disk",
+      "status": "SKIP",
+      "detail": "Explorer is not visible from this automated session (window \"drag-mvxi84gx\" did not appear (saw: Sidekick DPI probe)); run on a normal desktop",
+      "ms": 8190
+    },
+    {
+      "name": "Panel screenshot (acrylic check)",
+      "status": "PASS",
+      "detail": "522x795 (panel.png)",
+      "ms": 1701
+    },
+    {
+      "name": "Home screenshot (acrylic check)",
+      "status": "PASS",
+      "detail": "1560x1053 (home.png)",
+      "ms": 2397
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "uia-probe",
+      "file": "uia-probe.png",
+      "width": 690,
+      "height": 480
+    },
+    {
+      "name": "dpi-probe",
+      "file": "dpi-probe.png",
+      "width": 630,
+      "height": 390
+    },
+    {
+      "name": "panel",
+      "file": "panel.png",
+      "width": 522,
+      "height": 795
+    },
+    {
+      "name": "home",
+      "file": "home.png",
+      "width": 1560,
+      "height": 1053
+    }
+  ]
+}

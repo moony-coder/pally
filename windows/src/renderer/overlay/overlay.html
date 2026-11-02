@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'none'">
+<link rel="stylesheet" href="../shared/design.css">
+<link rel="stylesheet" href="overlay.css">
+<title>Sidekick overlay</title></head>
+<body>
+<div id="drive-edge"></div>
+<div id="drive-chip"><span class="pulse"></span><span id="drive-text">Sidekick is driving</span><span class="esc">Esc to stop</span></div>
+<svg id="draw-layer" xmlns="http://www.w3.org/2000/svg"></svg>
+<div id="cards"></div>
+<div id="caption"></div>
+<div id="welcome" class="bubble"></div>
+<div id="intro-card" class="intro-card hidden" aria-live="polite">
+  <div class="intro-kicker"><span></span>First run</div>
+  <h2>Hey, I'm <em>Sidekick</em>.</h2>
+  <p class="intro-lead">A small sidekick that lives next to your cursor.</p>
+  <div class="intro-steps">
+    <div class="intro-step"><span class="n">1</span><div><b>Talk to me</b><small id="intro-shortcut">Hold Control + Alt and ask out loud.</small></div></div>
+    <div class="intro-step"><span class="n">2</span><div><b>I can look</b><small>A screenshot is taken only when you ask.</small></div></div>
+    <div class="intro-step"><span class="n">3</span><div><b>I can do it</b><small>I point, draw, and drive the PC only with your approval.</small></div></div>
+  </div>
+  <div class="intro-foot">Esc stops me. Moving the mouse during a task also stops me.</div>
+</div>
+<div id="prompt" class="bubble"></div>
+<div id="nav-bubble" class="bubble"></div>
+<div id="buddy-wave"></div>
+<div id="buddy-spinner"><svg viewBox="0 0 14 14" width="14" height="14"></svg></div>
+<div id="buddy-triangle"><svg viewBox="0 0 16 16" width="16" height="16" style="overflow:visible"><polygon points="8,-1.24 0,12.62 16,12.62" fill="#3380FF"/></svg></div>
+<script src="../../shared/motion.js"></script>
+<script src="overlay.js"></script>
+</body></html>
