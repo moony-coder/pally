@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.npm-cache/
+.electron-builder-cache/
+.build-temp/
+.voice-test/
+test/e2e/out/
+test/windows/out/
+*.log

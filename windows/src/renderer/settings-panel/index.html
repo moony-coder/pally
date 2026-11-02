@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src data:">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sidekick Settings</title>
+<link rel="stylesheet" href="panel.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>Sidekick Settings</h1>
+    <p class="sub" id="sub">Loading...</p>
+  </header>
+
+  <section class="card" id="keyCard">
+    <div class="row between">
+      <h2><span id="keyTitle">AI key</span></h2>
+      <span class="chip" id="keyChip">...</span>
+    </div>
+    <p class="hint" id="keyHint"></p>
+    <div class="row">
+      <input id="keyInput" type="password" autocomplete="off" spellcheck="false" placeholder="Paste your key here">
+      <button id="keySave" class="primary">Save</button>
+    </div>
+    <div class="row links">
+      <a href="#" id="keyGet">Get a key</a>
+      <a href="#" id="keyClear" class="muted">Remove saved key</a>
+    </div>
+    <p class="msg" id="keyMsg" role="status"></p>
+  </section>
+
+  <section class="card">
+    <h2>Voice</h2>
+    <label class="field">Voice engine
+      <select id="engine">
+        <option value="edge">Natural voice (Microsoft, free, needs internet)</option>
+        <option value="local">Offline voice (Kokoro, on this PC)</option>
+        <option value="windows">Windows voice (basic)</option>
+      </select>
+    </label>
+    <label class="field" id="edgeField">Natural voice
+      <div class="row"><select id="edgeVoice"></select><button id="edgePreview">Play</button></div>
+    </label>
+    <label class="field" id="kokoroField">Offline voice
+      <div class="row"><select id="kokoroSpeaker"></select><button id="kokoroPreview">Play</button></div>
+    </label>
+    <p class="hint" id="edgeNote"></p>
+    <p class="msg" id="voiceMsg" role="status"></p>
+  </section>
+
+  <section class="card">
+    <h2>Hearing &amp; local voice</h2>
+    <div class="note" id="kokoroNote"></div>
+    <label class="field">Hearing model
+      <select id="whisperModel"></select>
+    </label>
+    <p class="hint" id="whisperHint"></p>
+    <div class="bar" id="bar" hidden><div id="barFill"></div></div>
+    <p class="hint" id="installStage"></p>
+    <div class="row">
+      <button id="lvInstall" class="primary">Download</button>
+      <button id="lvRemove">Remove</button>
+    </div>
+    <p class="hint">If you had an older install, press Remove and then Download once. That fetches the corrected voice and your chosen hearing model.</p>
+  </section>
+
+  <section class="card">
+    <h2>Hands-free</h2>
+    <label class="toggle"><input type="checkbox" id="wakeOn"><span>Wake word (always listening for the phrase below)</span></label>
+    <label class="field" id="wakePhraseField">Wake phrase
+      <input id="wakePhrase" type="text" maxlength="40" spellcheck="false" placeholder="hey sidekick">
+    </label>
+    <label class="toggle"><input type="checkbox" id="followOn"><span>Keep listening after an answer, no wake word needed</span></label>
+    <label class="field" id="followField">For how long
+      <div class="row"><input id="followSec" type="range" min="3" max="30" step="1"><span id="followLabel" class="val"></span></div>
+    </label>
+    <p class="hint">Wake word and hearing both need the local voice from the card above.</p>
+    <p class="msg" id="wakeMsg" role="status"></p>
+  </section>
+
+  <section class="card">
+    <h2>Speed &amp; display</h2>
+    <label class="toggle"><input type="checkbox" id="quickOn"><span>Instant commands without the AI (open apps, volume, time, stop)</span></label>
+    <label class="toggle"><input type="checkbox" id="capOn"><span>Show captions while Sidekick talks</span></label>
+    <label class="toggle"><input type="checkbox" id="eyesOn"><span>Little eyes in the corner that follow your mouse</span></label>
+    <label class="field" id="eyesCornerField">Eyes corner
+      <select id="eyesCorner">
+        <option value="bottom-right">Bottom right</option>
+        <option value="bottom-left">Bottom left</option>
+        <option value="top-right">Top right</option>
+        <option value="top-left">Top left</option>
+      </select>
+    </label>
+  </section>
+
+  <section class="card">
+    <h2>Trouble?</h2>
+    <p class="hint">Something not working? Open the log file and send it along. It never contains your key.</p>
+    <div class="row"><button id="logOpen">Show log file</button></div>
+  </section>
+</main>
+<script src="panel.js"></script>
+</body>
+</html>

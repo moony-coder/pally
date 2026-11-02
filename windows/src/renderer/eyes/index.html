@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src data:">
+<title>Sidekick eyes</title>
+<link rel="stylesheet" href="eyes.css">
+</head>
+<body>
+<svg id="face" viewBox="0 0 150 90" width="150" height="90" aria-hidden="true">
+  <defs>
+    <clipPath id="clipL"><ellipse cx="48" cy="46" rx="27" ry="34"/></clipPath>
+    <clipPath id="clipR"><ellipse cx="102" cy="46" rx="27" ry="34"/></clipPath>
+  </defs>
+  <g id="bob">
+    <g id="eyeL">
+      <ellipse class="white" cx="48" cy="46" rx="27" ry="34"/>
+      <g clip-path="url(#clipL)">
+        <circle class="pupil" id="pupilL" cx="48" cy="46" r="12"/>
+        <circle class="glint" id="glintL" cx="44" cy="40" r="4"/>
+        <rect class="lid" id="lidTopL" x="14" y="-10" width="68" height="0"/>
+        <rect class="lid" id="lidBotL" x="14" y="80" width="68" height="0"/>
+      </g>
+      <ellipse class="rim" cx="48" cy="46" rx="27" ry="34"/>
+    </g>
+    <g id="eyeR">
+      <ellipse class="white" cx="102" cy="46" rx="27" ry="34"/>
+      <g clip-path="url(#clipR)">
+        <circle class="pupil" id="pupilR" cx="102" cy="46" r="12"/>
+        <circle class="glint" id="glintR" cx="98" cy="40" r="4"/>
+        <rect class="lid" id="lidTopR" x="68" y="-10" width="68" height="0"/>
+        <rect class="lid" id="lidBotR" x="68" y="80" width="68" height="0"/>
+      </g>
+      <ellipse class="rim" cx="102" cy="46" rx="27" ry="34"/>
+    </g>
+  </g>
+</svg>
+<script src="eyes.js"></script>
+</body>
+</html>

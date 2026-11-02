@@ -1,0 +1,194 @@
+[
+  {
+    "name": "screenshot 01-panel-onboarding-ready",
+    "ok": true,
+    "extra": "522x339"
+  },
+  {
+    "name": "panel shows Start button",
+    "ok": true
+  },
+  {
+    "name": "screenshot 02-panel-ready",
+    "ok": true,
+    "extra": "522x519"
+  },
+  {
+    "name": "panel shows model picker",
+    "ok": true
+  },
+  {
+    "name": "overlay window created",
+    "ok": true,
+    "extra": "count 1"
+  },
+  {
+    "name": "screenshot 03-overlay-processing",
+    "ok": true,
+    "extra": "1920x1200"
+  },
+  {
+    "name": "screenshot 04-overlay-pointing",
+    "ok": true,
+    "extra": "1920x1200"
+  },
+  {
+    "name": "screenshot 05-overlay-after",
+    "ok": true,
+    "extra": "1920x1200"
+  },
+  {
+    "name": "conversation history stored",
+    "ok": true,
+    "extra": "len 1"
+  },
+  {
+    "name": "preload blocks unknown channels",
+    "ok": true
+  },
+  {
+    "name": "preload exposes sidekick.on to the overlay",
+    "ok": true
+  },
+  {
+    "name": "overlay:explain reached the overlay (card in DOM)",
+    "ok": true
+  },
+  {
+    "name": "screenshot 05b-overlay-explain",
+    "ok": true,
+    "extra": "1920x1200"
+  },
+  {
+    "name": "explain card has title, 3 flow boxes, 2 steps, 1 note",
+    "ok": true,
+    "extra": "{\"title\":\"How a cell works\",\"flow\":3,\"steps\":2,\"notes\":1,\"arrows\":2}"
+  },
+  {
+    "name": "two [DRAW:note] stickies rendered with their text",
+    "ok": true,
+    "extra": "[\"Nucleus holds the DNA\",\"Vacuole stores water\"]"
+  },
+  {
+    "name": "no sticky note overlaps the explain card",
+    "ok": true,
+    "extra": "overlapping: 0"
+  },
+  {
+    "name": "stickies have a pin on the exact point",
+    "ok": true
+  },
+  {
+    "name": "screenshot 06-home-chat",
+    "ok": true,
+    "extra": "1560x1053"
+  },
+  {
+    "name": "screenshot 07-home-agent",
+    "ok": true,
+    "extra": "1560x1053"
+  },
+  {
+    "name": "screenshot 07-home-routines",
+    "ok": true,
+    "extra": "1560x1053"
+  },
+  {
+    "name": "screenshot 07-home-memory",
+    "ok": true,
+    "extra": "1560x1053"
+  },
+  {
+    "name": "screenshot 07-home-visuals",
+    "ok": true,
+    "extra": "1560x1053"
+  },
+  {
+    "name": "screenshot 07-home-settings",
+    "ok": true,
+    "extra": "1560x1053"
+  },
+  {
+    "name": "Home -> Agent exposes safety.js access rules",
+    "ok": true,
+    "extra": "{\"blocked\":true,\"allowed\":true,\"always\":true,\"modeButtons\":2,\"blockedText\":\"1password\\nbitwarden\\nkeepass\\nlastpass\\ndas\"}"
+  },
+  {
+    "name": "screenshot 07b-home-access-rules",
+    "ok": true,
+    "extra": "1560x1053"
+  },
+  {
+    "name": "home chat has messages",
+    "ok": true,
+    "extra": "chat 2"
+  },
+  {
+    "name": "notch HUD shows the live multi-step plan",
+    "ok": true,
+    "extra": "{\"rows\":3,\"done\":1,\"now\":\"Open a new note\"}"
+  },
+  {
+    "name": "screenshot 08-notch",
+    "ok": true,
+    "extra": "660x513"
+  },
+  {
+    "name": "screenshot 09-overlay-driving",
+    "ok": true,
+    "extra": "1920x1200"
+  },
+  {
+    "name": "screenshot 10-model3d",
+    "ok": true,
+    "extra": "840x780"
+  },
+  {
+    "name": "3D model built and loading overlay hidden",
+    "ok": true,
+    "extra": "Plant cell"
+  },
+  {
+    "name": "3D viewer has one clickable fact card per part",
+    "ok": true,
+    "extra": "count 5, fact \"A rigid outer layer that gives the cell its shape.\""
+  },
+  {
+    "name": "Clicking a 3D fact card selects that part",
+    "ok": true,
+    "extra": "{\"selected\":true,\"name\":\"Cell wall\",\"fact\":\"A rigid outer layer that gives the cell its shape.\"}"
+  },
+  {
+    "name": "screenshot 10b-model3d-facts",
+    "ok": true,
+    "extra": "840x780"
+  },
+  {
+    "name": "first-run introduction card replaces the deleted video",
+    "ok": true
+  },
+  {
+    "name": "screenshot 11-overlay-welcome",
+    "ok": true,
+    "extra": "1920x1200"
+  },
+  {
+    "name": "Ollama preset lists models from /api/tags",
+    "ok": true,
+    "extra": "[\"llama3.2:3b\",\"qwen2.5vl:7b\"]"
+  },
+  {
+    "name": "Ollama capability badges come from /api/show",
+    "ok": true,
+    "extra": "[\"completion\",\"vision\",\"tools\",\"completion\",\"tools\"]"
+  },
+  {
+    "name": "Ollama connection test hits /v1/models",
+    "ok": true
+  },
+  {
+    "name": "screenshot 12-home-ollama",
+    "ok": true,
+    "extra": "1560x1053"
+  }
+]

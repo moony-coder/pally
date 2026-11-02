@@ -1,0 +1,10 @@
+{
+  "name": "Sidekick",
+  "slug": "sidekick",
+  "appId": "com.moonycoder.sidekick",
+  "artifactName": "Sidekick-Setup-${version}.${ext}",
+  "shortcutName": "Sidekick",
+  "userDataFolder": "Sidekick",
+  "powershellNamespace": "Sidekick",
+  "trademarkNote": "Placeholder product name. Check trademarks before distributing this build."
+}

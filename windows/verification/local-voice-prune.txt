@@ -1,0 +1,2 @@
+﻿Local voice after pruning: 1991 MB -> 395 MB; status stt=true tts=true; real Whisper transcript: Open the Settings menu and turn on Dark Mode.; real Kokoro WAV: 113770 bytes RIFF.
+This was measured on 2026-11-01T12:47:53.8259820+05:00 against %APPDATA%\Sidekick\local-voice after pruneExtras().

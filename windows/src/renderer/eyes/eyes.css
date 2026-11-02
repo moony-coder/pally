@@ -1,0 +1,7 @@
+html,body{margin:0;background:transparent;overflow:hidden;width:150px;height:90px;user-select:none}
+svg{display:block}
+.white{fill:#fff}
+.rim{fill:none;stroke:#1f3a5f;stroke-width:3}
+.pupil{fill:#14213d}
+.glint{fill:#fff}
+.lid{fill:#5b9bd5;stroke:#1f3a5f;stroke-width:2}

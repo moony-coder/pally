@@ -1,0 +1,46 @@
+
+2026-11-01T07:46:24.933Z [info] Sidekick starting {"version":"1.0.0","electron":"45.2.1","e2e":true}
+2026-11-01T07:46:27.565Z [info] local voice pruned {"freedMB":0}
+PASS screenshot 01-panel-onboarding-ready - 522x339
+PASS panel shows Start button
+PASS screenshot 02-panel-ready - 522x519
+PASS panel shows model picker
+PASS overlay window created - count 1
+PASS screenshot 03-overlay-processing - 1920x1200
+2026-11-01T07:46:33.658Z [info] turn {"controls":0,"screenshot":true}
+PASS screenshot 04-overlay-pointing - 1920x1200
+PASS screenshot 05-overlay-after - 1920x1200
+PASS conversation history stored - len 1
+PASS preload blocks unknown channels
+PASS preload exposes sidekick.on to the overlay
+2026-11-01T07:46:40.695Z [info] turn {"controls":8,"screenshot":true}
+PASS overlay:explain reached the overlay (card in DOM)
+PASS screenshot 05b-overlay-explain - 1920x1200
+PASS explain card has title, 3 flow boxes, 2 steps, 1 note - {"title":"How a cell works","flow":3,"steps":2,"notes":1,"arrows":2}
+PASS two [DRAW:note] stickies rendered with their text - ["Nucleus holds the DNA","Vacuole stores water"]
+PASS no sticky note overlaps the explain card - overlapping: 0
+PASS stickies have a pin on the exact point
+PASS screenshot 06-home-chat - 1560x1053
+PASS screenshot 07-home-agent - 1560x1053
+PASS screenshot 07-home-routines - 1560x1053
+PASS screenshot 07-home-memory - 1560x1053
+PASS screenshot 07-home-visuals - 1560x1053
+PASS screenshot 07-home-settings - 1560x1053
+PASS Home -> Agent exposes safety.js access rules - {"blocked":true,"allowed":true,"always":true,"modeButtons":2,"blockedText":"1password\nbitwarden\nkeepass\nlastpass\ndas"}
+PASS screenshot 07b-home-access-rules - 1560x1053
+PASS home chat has messages - chat 2
+PASS notch HUD shows the live multi-step plan - {"rows":3,"done":1,"now":"Open a new note"}
+PASS screenshot 08-notch - 660x513
+PASS screenshot 09-overlay-driving - 1920x1200
+PASS screenshot 10-model3d - 840x780
+PASS 3D model built and loading overlay hidden - Plant cell
+PASS 3D viewer has one clickable fact card per part - count 5, fact "A rigid outer layer that gives the cell its shape."
+PASS Clicking a 3D fact card selects that part - {"selected":true,"name":"Cell wall","fact":"A rigid outer layer that gives the cell its shape."}
+PASS screenshot 10b-model3d-facts - 840x780
+PASS first-run introduction card replaces the deleted video
+PASS screenshot 11-overlay-welcome - 1920x1200
+PASS Ollama preset lists models from /api/tags - ["llama3.2:3b","qwen2.5vl:7b"]
+PASS Ollama capability badges come from /api/show - ["completion","vision","tools","completion","tools"]
+PASS Ollama connection test hits /v1/models
+PASS screenshot 12-home-ollama - 1560x1053
+E2E done: 40/40 passed
